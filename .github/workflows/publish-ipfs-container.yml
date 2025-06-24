@@ -20,7 +20,8 @@ jobs:
   push:
     runs-on: ubuntu-latest
     permissions:
-      packages: write
+      packages: write # publish docker image to ghcr.io
+      contents: write # create release
     if: github.event_name == 'push'
 
     steps:
